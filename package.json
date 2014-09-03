@@ -80,6 +80,7 @@
         "watershed": "^0.3.0"
     },
     "scripts": {
-        "test": "nodeunit ./test"
+        "test": "nodeunit ./test",
+        "test-tap-file": "nodeunit --reporter tap ./test > tests.tap"
     }
 }
