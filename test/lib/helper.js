@@ -7,7 +7,7 @@
 'use strict';
 /* eslint-disable func-names */
 
-var domain = require('domain');
+var domaine = require('domaine');
 
 var bunyan = require('bunyan');
 var once = require('once');
@@ -19,7 +19,7 @@ var restify = require('../../lib');
 module.exports = {
     after: function after(teardown) {
         module.parent.exports.tearDown = function _teardown(callback) {
-            var d = domain.create();
+            var d = domaine.create();
             var self = this;
 
             d.once('error', function(err) {
@@ -35,7 +35,7 @@ module.exports = {
 
     before: function before(setup) {
         module.parent.exports.setUp = function _setup(callback) {
-            var d = domain.create();
+            var d = domaine.create();
             var self = this;
 
             d.once('error', function(err) {
@@ -51,7 +51,7 @@ module.exports = {
 
     test: function test(name, tester) {
         module.parent.exports[name] = function _(t) {
-            var d = domain.create();
+            var d = domaine.create();
             var self = this;
 
             d.once('error', function(err) {

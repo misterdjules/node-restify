@@ -3,6 +3,7 @@
 
 // external requires
 var assert = require('chai').assert;
+var domaine = require('domaine');
 
 var restify = require('../../lib/index.js');
 var restifyClients = require('restify-clients');
@@ -273,7 +274,7 @@ describe('request metrics plugin', function() {
                     assert.ok(err);
                     assert.equal(err.name, 'Error');
                     assert.equal(err.message, 'boom');
-                    assert.isObject(err.domain);
+                    assert.isObject(err[domaine.domaineSym]);
 
                     assert.isObject(metrics, 'metrics');
                     assert.equal(metrics.statusCode, 500);
