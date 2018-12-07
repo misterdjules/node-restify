@@ -1,3 +1,23 @@
+<a name="7.3.0"></a>
+## 7.3.0 (2018-12-07)
+
+
+#### Bug Fixes
+
+* documentation typo fix (#1688) ([0fa71328](git://github.com/restify/node-restify.git/commit/0fa71328))
+* proxy events into instance var and add test script (#1661) ([de72f49e](git://github.com/restify/node-restify.git/commit/de72f49e))
+* **server:**
+  * fix uncaught exceptions triggering route lookups (#1717) ([e49cb3b2](git://github.com/restify/node-restify.git/commit/e49cb3b2))
+  * address req and res close event changes in Node v10.x (#1672) ([6be3fb7c](git://github.com/restify/node-restify.git/commit/6be3fb7c))
+
+
+#### Features
+
+* add support for non-strict formatters (#1721) ([de1833a4](git://github.com/restify/node-restify.git/commit/de1833a4))
+* jsonBodyParser handles extended content types *+json (#1663) ([45375144](git://github.com/restify/node-restify.git/commit/45375144))
+* **helpers:** add compose feature (#1660) ([eb60ef40](git://github.com/restify/node-restify.git/commit/eb60ef40))
+
+
 <a name="7.2.3"></a>
 ### 7.2.3 (2018-11-16)
 
